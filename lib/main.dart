@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          theme: ThemeHelper().getTheme(), 
+          theme: ThemeHelper().getTheme(),
           title: 'ta_mobile',
           debugShowCheckedModeBanner: false,
           initialRoute: AppRoutes.initialRoute,
