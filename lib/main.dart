@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          theme: theme,
-          title: 'aden_xi_rpl_1_s_application3',
+          theme: ThemeHelper().getTheme(), 
+          title: 'ta_mobile',
           debugShowCheckedModeBanner: false,
           initialRoute: AppRoutes.initialRoute,
           routes: AppRoutes.routes,
