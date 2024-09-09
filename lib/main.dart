@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
-import  'package:flutter/services.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
+import 'core/app_export.dart';
+
+var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
 void main() {
-  runApp(const MainApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  ThemeHelper().changeTheme("primary");
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('halo dunia'),
-        ),
-      ),
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return MaterialApp(
+          theme: theme,
+          title: 'aden_xi_rpl_1_s_application3',
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppRoutes.initialRoute,
+          routes: AppRoutes.routes,
+        );
+      },
     );
   }
 }
