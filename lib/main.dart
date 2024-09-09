@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+var globalMessengerKey = GlobalKey<ScaffoldMessengerState();
 void main() {
   runApp(const MainApp());
 }
