@@ -20,7 +20,7 @@ class CustomButtonStyles {
             color: appTheme.black900.withOpacity(0.25),
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: Offset(4, 1),
+            offset: Offset(0, 4),
           ),
         ],
         gradient: LinearGradient(
